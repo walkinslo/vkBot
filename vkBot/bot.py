@@ -26,6 +26,27 @@ for event in longpool.listen():
             msg = event.text.lower()
             id = event.user_id
 
-            if msg == 'привет':
-                sender(id, 'привет')
-                send_stick(id, 49)
+                        if msg == 'привет':
+                send_stick(id, 50601)
+                sender(id, 'Привет! Что вас интересует? (вступление, отзыв)')
+            if msg == 'вступление':
+                sender(id, 'О, это отлично! Пожалуйста, заполните эту форму: https://forms.gle/bSwmYoDZyYpuUrBAA, '
+                           'позже с вами свяжется администратор.')
+            if msg == 'отзыв':
+                sender(id, 'Спасибо! Пожалуйста, перейдите по этой ссылке: https://vk.com/topic-200484118_46658255, и '
+                           'оставьте отзыв!')
+            if msg == 'спасибо':
+                send_stick(id, 50599)
+                sender(id, 'И Вам спасибо!')
+
+            if msg == 'пока':
+                sender(id, 'Возвращайтесь скорее!')
+
+            if msg == 'лох':
+                sender(id, 'Нет ты')
+
+            if msg == 'соси':
+                sender(id, 'А сам пососать не хочешь?')
+
+            if msg == 'люблю вас':
+                sender(id, 'И мы Вас любим!')
